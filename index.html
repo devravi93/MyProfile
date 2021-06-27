@@ -390,6 +390,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="section" id="projects">
+                <div class="container cc-experience" id="projectBody">
+                    <div class="h4 text-center mb-4 title">Projects</div>
+
+                </div>
+            </div>
+
             <div class="section">
                 <div class="container cc-education">
                     <div class="h4 text-center mb-4 title">Education</div>
@@ -585,6 +593,135 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            var arr = [{
+                name: 'ONE MARKETPLACE',
+                company: 'FIS',
+                tech: 'ASP.NET CORE & ANGULAR 8',
+                description: 'ServiceLink’s one stop application for handling their property/assets at one place. This application will tell you all about the status of each property such as its losses, its auction status, its loan status etc. There’s also entire message center build into this application where user can send messages/reply/forward/delete etc. All of the functionality of any popular mailing system (such as outlook). (Front End – Angular 8, Web API- ASP.NET Core, Azure Cosmos DB, Azure SQL Server)'
+            }, {
+                name: 'EXOS ACCOUNTING',
+                company: 'FIS',
+                tech: 'ASP.NET CORE & ANGULAR 8',
+                description: 'Accounting tool/web application for ServicLink in which all of their steps and applications will be accumulated here for the final effort estimation and billing. (Front End – Angular 8, Web API- ASP.NET Core, Azure SQL Server ,Azure Cosmos DB'
+            }, {
+                name: 'INVENTORY TOOL',
+                company: 'BCS',
+                tech: 'ASP.NET CORE & ANGULAR 7 ',
+                description: 'Inventory tool is for the internal usage of BCS to keep the inventory where admin can create categories, their details and then the reports will be generated as per the requirement of the user.(Front End – Angular 7, Web API- ASP.NET Core)'
+            }, {
+                name: 'SURVEY TOOL',
+                company: 'BCS',
+                tech: 'ASP.NET CORE & ANGULAR 7 ',
+                description: 'Survey tool is where HR/Admin can create a dynamic questionnaire, send questionnaire to employees, record their responses, and generate reports of the user responses (Front End – Angular 7, Web APIASP.NET Core).'
+            }, {
+                name: 'GETGO RATES ADMIN - CEBU PACIFIC ',
+                company: 'BCS',
+                tech: 'ASP.NET CORE MVC',
+                description: 'This project is for admin usage in order to change the prices coming from Navitaire to the points that needed in their loyalty program. Rates are kept for every possible city pair with carriers as well. Uni & Bi directional routes are supported.'
+            }, {
+                name: 'GETGO - CEBU PACIFIC',
+                company: 'BCS',
+                tech: 'ASP.NET MVC',
+                description: 'This project is loyalty program of cebu pacific airlines in which user can book the flights from points being rewarded to the user.User can add its travel mates, make payment through points, credit cards & payment centers '
+            }, {
+                name: 'JAZEERA',
+                company: 'BCS',
+                tech: 'ASP.NET',
+                description: 'This project is the main booking site of Jazeera Airways, where user can book flight through multiple flows. Manage booking, payments. User can add many extra features such as baggae, insurance, meals etc'
+            }, {
+                name: 'JODI - JETSTAR',
+                company: 'BCS',
+                tech: 'ASP.NET MVC',
+                description: 'JODI is the application of JetStar airlines where all the delays & disruptions and recorded for all of the live flights with their recovery policy and customer communications in place. This project has a very critical importance to the client so performance was of utmost importance in this project'
+            }, {
+                name: 'SECRET MANAGER - JETSTAR',
+                company: 'BCS',
+                tech: 'ASP.NET CORE',
+                description: 'Implemented AWS (Amazon) Secret manager to keep client’s connection string and sensitive data in the Amazon cloud and then retrieve them according to the user request (WEB API in ASP.NET Core). '
+            }, {
+                name: 'VOUCHER DROID - JETSTAR',
+                company: 'BCS',
+                tech: 'ASP.NET CORE',
+                description: 'Re-developed the existing voucher droid from older technology to ASP.Net Core for better performance and optimization as this droid would process thousands of requests daily which caused the system to be slow'
+            }, {
+                name: 'PRODIGIOUS - MTECH',
+                company: 'PC Solutions',
+                tech: 'ASP.NET MVC',
+                description: 'Developed their current hospital based windows ERP solution to ASP.NET MVC. This ERP solution contains entire HR management solution, Financial Assets Management, Inventory. In this application here are several third party jQuery libraries are used such as JS Tree, jQuery data tables, high charts etc.'
+            }, {
+                name: 'DR. LAL PATH LABS',
+                company: 'PC Solutions',
+                tech: 'ASP.NET MVC',
+                description: 'Developed an ERP solution for the internal working of Dr. Lal Path Labs which includes employee management, customer management, tests and reports record for each customer, shift and sessions for the staff etc. Each report can be mailed to customer directly from the portal with all the results of the test and their bills. This project included some third party jQuery libraries such as high charts, data tables etc'
+            }, {
+                name: 'EZ CLAIM',
+                company: 'PC Solutions',
+                tech: 'ASP.NET MVC',
+                description: 'ERP Solution based on travel conveyance, approval system according to employee’s level and account team’s portal. Manager can view the location of the employee that from where employee started his/her claim with timely updates of the route which were plotted on google maps'
+            }, {
+                name: 'ERM – PC SOLUTION’S EMPLOYEE PORTAL',
+                company: 'PC Solutions',
+                tech: 'ASP.NET MVC',
+                description: 'Developed a module with employee’s entire performance shown in a graphical manner (Used third party library – HighCharts.js)Developed a module for employees to view and apply for IJPs. A scheduler job was made that would check the vacancies in the each department, attrition rate and resignations and will provide HR with possible vacancies that might need to be fulfilled.'
+            }, {
+                name: 'SUBEX MIGRATION',
+                company: 'Pc Solutions',
+                tech: 'SHAREPOINT',
+                description: 'Migrated client’s entire structure from Docushare to SharePoint Online with all the permissions and data while retaining structure.'
+            }];
+
+            var doc = '';
+
+            // <div class="card">
+            //                         <div class="row">
+            //                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+            //                                 <div class="card-body cc-experience-header">
+            //                                     <p>ONE MARKETPLACE - FIS</p>
+            //                                     <div class="h5">(ASP.NET CORE & ANGULAR 8)</div>
+            //                                 </div>
+            //                             </div>
+            //                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            //                                 <div class="card-body">
+            //                                     <div class="h5">Senior Software Engineer</div>
+            //                                     <p>Working as Senior Software Developer on Microsoft technologies, Angular & Cloud platform Azure.
+            //                                     </p>
+            //                                 </div>
+            //                             </div>
+
+            //                         </div>
+            //                     </div>
+
+            $(arr).each(function(i, item) {
+                doc += '<div class="card">';
+                doc += '<div class="row">';
+
+                doc += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
+                doc += '<div class="card-body cc-experience-header">';
+                doc += '<p>' + item.name + '</p>';
+                doc += '<div class="h5">' + item.company + '</div>';
+                doc += '</div>';
+                doc += '</div>';
+
+                doc += '<div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">';
+                doc += '<div class="card-body">';
+                doc += '<div class="h5">' + item.tech + '</div>';
+                doc += '<p>' + item.description + '<p>';
+                doc += '</div>';
+                doc += '</div>';
+
+
+                doc += '</div>';
+                doc += '</div>';
+            });
+
+            $('#projectBody').append(doc);
+
+        });
+    </script>
 </body>
 
 </html>
